@@ -24,9 +24,7 @@ const MongoStore = require("connect-mongo")(session);
 // Mongoose
 
 mongoose
-  .connect('mongodb://localhost/hackathon-app', {
-    useNewUrlParser: true
-  })
+  .connect('mongodb://localhost/food-app', {useNewUrlParser: true})
   .then(x => {
     console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
   })
@@ -129,6 +127,7 @@ app.use(flash());
 // Routes
 
 const index = require('./routes/index');
+const route_admin = require("./routes/login.js")
 app.use('/', index);
 
 
