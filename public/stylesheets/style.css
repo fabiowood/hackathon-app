@@ -1,8 +1,103 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
+html {
+  font-size: 62.5%; }
 
-a {
-  color: #00B7FF; }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  margin-top: 1px;
+  padding-top: -1px; }
+
+.container-fluid {
+  margin: 0 !important;
+  padding: 0 !important; }
+
+.row {
+  margin: 0 !important;
+  width: 100%;
+  height: 100%; }
+
+.navbar {
+  height: 6rem;
+  font-size: 2rem;
+  background-color: white; }
+
+.header {
+  /* background-image: url('https://pixabay.com/get/52e5d0424c5aa414f6d1867dda6d49214b6ac3e45656704a772e7cd390/outdoors-4551688_1920.jpg'); */
+  background-color: white;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  margin-top: 6rem !important; }
+
+.section-one {
+  width: 100%;
+  height: 100vh;
+  background-color: #FDE03C; }
+
+.section-one-div {
+  height: 50%; }
+
+.title {
+  height: 80px; }
+
+.title h1 {
+  font-size: 6rem; }
+
+.header2 {
+  background-image: url("https://pixabay.com/get/52e5d4414851a814f6d1867dda6d49214b6ac3e45656704a762e79d593/path-4512234_1920.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh; }
+
+.header-block {
+  height: 100%; }
+
+.form-header {
+  width: 100%;
+  font-size: 1.4rem;
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 18px;
+  border: 2px solid rgba(0, 0, 0, 0);
+  height: 22rem; }
+
+.text-header h1 {
+  font-size: 1.7rem; }
+
+.header-div div {
+  height: 100%; }
+
+.img-header {
+  width: 341px;
+  height: 350px; }
+
+.img-header img {
+  width: 100%;
+  height: 100%; }
+
+.footer {
+  height: 200px;
+  background-color: black; }
+
+.img-section {
+  width: 114px;
+  height: 114px;
+  border-bottom-right-radius: 28px;
+  border: 2px solid rgba(0, 0, 0, 0);
+  background-color: brown; }
+
+.img-section img {
+  max-width: 100%;
+  max-height: 100%; }
+
+.section-one-cards img {
+  width: 119px;
+  height: 115px; }
 
 /*# sourceMappingURL=style.css.map */

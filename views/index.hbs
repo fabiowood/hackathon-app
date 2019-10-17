@@ -1,2 +1,132 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+<div class="container-fluid">
+  {{!-- ////////// NAV --}}
+  <div class="navbar row fixed-top">
+    <div class="col-12">
+      <div class="row d-flex justify-content-start">
+        <div class="col-4 d-flex justify-content-start pl-5">
+          LOGO
+        </div>
+      </div>
+    </div>
+  </div>
+  {{!-- //////////// HEADER --}}
+  <div class="row header d-flex justify-content-around align-items-top">
+    <div class="col-8 col-md-12 title pl-5">
+      <h1>
+        TITULO
+      </h1>
+    </div>
+
+    <div class="col-8 col-md-3 mt-5 mt-md-0 order-md-1 order-2 d-flex justify-content-center pb-5 pb-md-0 img-header">
+      <img src="./images/foto2.png" alt="" />
+    </div>
+    <div class="col-8 col-md-3 mt-5 mt-md-0 order-md-2 order-1 d-flex justify-content-center text-header">
+      <h1>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, eveniet autem, laudantium amet ab perspiciatis
+        facilis quisquam quas eaque dignissimos commodi consectetur. Adipisci voluptatibus et deleniti laborum,
+        impedit praesentium accusamus blanditiis.
+      </h1>
+    </div>
+    <div class="col-8 col-md-3 mt-5 mt-md-0 order-md-3 d-none d-md-flex justify-content-center">
+      <form class="form-header" action="/" method="POST">
+        <div class="form-group pb-3 px-5">
+          <div class="input-group input-group-lg">
+            <input type="text" class="form-control" aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing-lg" />
+          </div>
+        </div>
+        <div class="form-group pb-3 px-5">
+          <div class="input-group input-group-lg">
+            <input type="text" class="form-control" aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing-lg" />
+          </div>
+        </div>
+        <div class="d-flex justify-content-center">
+          <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#exampleModal">Submit</button>
+        </div>
+      </form>
+    </div>
+
+
+    <div class="modal fade" id="exampleModal" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {{!-- /////////////////SECTION 1 --}}
+  <div class="section-one row d-flex align-items-center">
+    <div class="col-12 section-one-div">
+      <div class="row">
+        <div class="col-12 col-md-4">
+          <div class="row">
+            <div class="section-one-cards col-12 d-flex align-items-center justify-content-center">
+              <img src="./images/Pig.png" alt="">
+            </div>
+            <div class="col-12 d-flex align-items-center justify-content-center">
+              <h1>ECONOMIZE</h1>
+              <p>Aproveite o cupom para economizar na sua primeira compra em nossa loja!</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="row">
+            <div class="section-one-cards col-12 d-flex align-items-center justify-content-center">
+              <img src="./images/Pig.png" alt="">
+            </div>
+            <div class="col-12 d-flex align-items-center justify-content-center">
+              TEXTO
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="row">
+            <div class="section-one-cards col-12 d-flex align-items-center justify-content-center">
+              <img src="./images/Pig.png" alt="">
+            </div>
+            <div class="col-12 d-flex align-items-center justify-content-center">
+              TEXTO
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer row d-flex justify-content-between align-content-center">
+    <div class="col-3 d-flex justify-content-center">
+      <h1>
+        LOGO
+      </h1>
+    </div>
+    <div class="col-4 d-flex justify-content-center">
+      <div class="row">
+        <div class="col-12">
+          <h2>
+            COMPANY
+          </h2>
+        </div>
+        <div class="col-12">
+          <h2>
+            ENDEREÇO
+          </h2>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
