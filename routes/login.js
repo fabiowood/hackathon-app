@@ -7,8 +7,8 @@ async function sendMail(title,texto, destin = "kawe@imaild.com") {
     var transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
-             user: "hacktonironhacker@gmail.com",
-             pass: "saulo@gabriel123"
+             user: process.env.USER_NAME,
+             pass: process.env.PASS_WORD
          }
      });
   
@@ -33,8 +33,8 @@ router.get("/login", async(req, res) => {
 
 router.get("/login/sendmail", async(req, res) => {
 
-  const titleToSend = "meu titutlo bonito"
-  const textToSend = "<p>Show de bola</p>"
+  const titleToSend = "meu titutlo bonito 2"
+  const textToSend = "<p>Show de bola env</p>"
   sendMail(titleToSend, textToSend)
   res.send("sucefull send email")
 
