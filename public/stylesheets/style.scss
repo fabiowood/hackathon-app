@@ -1,3 +1,9 @@
+@font-face {
+  font-family: 'Intro';
+  src: url('../images/IntroDemo-BlackCAPS.ttf');
+}
+
+
 html {
   font-size: 62.5%;
 }
@@ -8,6 +14,7 @@ html {
   box-sizing: border-box;
   font-family: 'DM Sans', sans-serif;
 }
+
 
 body {
   margin-top: 1px;
@@ -24,10 +31,12 @@ body {
   width: 100%;
   height: 100%;
 }
+
 .navbar {
-  height: 6rem;
+  position: absolute;
+  height: 7rem;
   font-size: 2rem;
-  background-color: #5A56F5;
+  background-color: rgba(91, 86, 245, 0);
 }
 
 .header {
@@ -37,9 +46,8 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 100vh;
   height: auto;
-  margin-top: 6rem !important;
+  padding: 10rem 0;
 }
 
 .section-one {
@@ -65,7 +73,7 @@ body {
 }
 
 .title h1 {
-  font-size: 6rem;
+  font-size: 4.3rem;
 }
 
 .header2 {
@@ -92,11 +100,17 @@ body {
 .btn {
   background: #5A56F5;
   border-radius: 14.5878px;
-  width: 100.25px;
+  width: auto;
   height: 48.47px;
   color: white;
   font-size: 19.1756px;
 }
+
+.btn:hover {
+  background: white;
+  color: #5A56F5;
+}
+
 .input-group-lg>.custom-select, .input-group-lg>.form-control:not(textarea) {
   height: calc(1.5em + 1rem + 15px);
   background: #ECECEC;
@@ -114,8 +128,9 @@ body {
 }
 
 .img-header {
-  width: 34.1rem;
-  height: 35rem;
+  width: 37.1rem;
+  height: 29rem;
+  
 }
 
 
@@ -126,7 +141,7 @@ body {
 
 .footer {
   height: 200px;
-  background-color: black;
+  background-color: #5A56F5;
 }
 
 .img-section {
@@ -153,8 +168,8 @@ body {
 }
 
 .section-one-img3 img {
-  width: 119px;
-  height: 115px;
+  width: 146px;
+  height: 102px;
 }
 
 .card-text p{
@@ -173,9 +188,42 @@ body {
   line-height: 47px;
 }
 
+.modal-body p, h3 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 31px;
+  text-align: center;
+}
+.modal-title {
+  width: 100%;
+  height: 10rem;
+}
+
+.modal-title img{
+  width: 100%;
+  height: 100%;
+}
+
 .modal-dialog {
-  margin: 0;
+  margin: 0 !important;
   height: 30rem;
+}
+
+.close span {
+  width: 5rem;
+}
+
+@media (min-width: 576px){
+  .modal-dialog {
+      max-width: 100%;
+      margin: 1.75rem auto;
+  }
+}
+
+.modal-config {
+  background: #FFFFFF;
+  border-radius: 50.249px;
 }
 
 .map-title h2 {
@@ -196,18 +244,76 @@ body {
 
 .map-div {
   width: 697px;
-  height: 442px;
-}
-
-.logo-nav h1 {
-  font-style: normal;
-  font-weight: bold;
-  font-size: 2.7rem;
-  line-height: 62px;
-  color: white;
+  height: 402px;
 }
 
 #map {
   width: 100%;
-  height: 500px;
+  height: 80%;
+}
+
+.logo-nav h1 {
+  font-style: normal;
+  font-size: 48px;
+  line-height: 62px;
+  color: white;
+}
+
+.foot-text div h2 {
+  color:white;
+}
+
+.pre-header {
+  background-image: url('../images/preheader.png');
+  // background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+
+.box-head {
+  height: 45%;
+  background: #5A56F5;
+  border-radius: 132px 0px 0px 0px;
+}
+
+
+.box-head h3 {
+  font-family: 'Intro';
+  font-size: 5rem;
+  line-height: 55px;
+  color: #FFFFFF;
+}
+
+.box-head  p {
+  font-family: DM Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 132.6%;
+  /* or 40px */
+  color: rgba(255, 255, 255, 0.51);
+}
+
+.box-head2 {
+  height: 40%;
+  background: #5A56F5;
+}
+.box-head2 h3 {
+  font-family: 'Intro';
+  font-size: 3rem;
+  color: #FFFFFF;
+}
+
+.box-head2  p {
+  font-family: DM Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 132.6%;
+  /* or 40px */
+  color: rgba(255, 255, 255, 0.51);
 }
