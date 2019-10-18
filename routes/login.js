@@ -31,9 +31,14 @@ async function sendMail(title,texto, destin = "kawe@imaild.com") {
    });
 }
 
+function randomString() {
+  return `${Math.random().toString(36).substring(7)}`
+}
+
 //------------------- LOGIN MAIN -------------------------------------------
 router.get("/login", async(req, res) => {
   res.render("admin/admin-get.hbs")
+  console.log(randomString())
 })
 
 
@@ -85,8 +90,8 @@ router.get("/login/sendmail", async(req, res) => {
       const adminPushUser = await admin.findOneAndUpdate({name: "test"}, { $push :{allUsers: create._id } })
       console.log(adminPushUser)
     }
-    const titleToSend = "meu titutlo bonito 2"
-    const textToSend = "<p>Show de bola env</p>"
+    const titleToSend = "Token Desconto"
+    const textToSend = `<p>Aqui o seu token de desconto <a>${randomString()}</a></p>`
     sendMail(titleToSend, textToSend, email)
     res.send("sucefull send email")
   }
