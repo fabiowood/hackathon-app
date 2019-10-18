@@ -11,6 +11,7 @@ const AdmSchema = new Schema (
   name: String,
   login: { type:Schema.Types.Mixed, unique: true, required: true } ,
   password: { type: Schema.Types.Mixed, required: true },
+  allUsers: [{type: Schema.Types.ObjectId, ref: "users"}],
   role: {type:String, default: "adm"}
   },
   { timestamps:true }
@@ -24,7 +25,6 @@ const TestAdm = {
   name:"test",
   login:"test",
   password:"test",
-  role:"MOD"
 }
 
 // adm.create(TestAdm).then((s) => console.log(s)).catch((e) => console.log(e))

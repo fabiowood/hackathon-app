@@ -21,7 +21,12 @@ const axios = require('axios');
 // ########################### Main Page #######################
 
 router.get('/', (req, res, next) => {
+  const ip = req.headers['x-forwarded-for'] || 
+     req.connection.remoteAddress || 
+     req.socket.remoteAddress ||
+     req.connection.socket.remoteAddress;
   res.render('index');
+  console.log(ip)
 });
 
 // ########################### Manage Roles #######################
