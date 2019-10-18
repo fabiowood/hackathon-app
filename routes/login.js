@@ -75,9 +75,12 @@ router.get("/login/sendmail", async(req, res) => {
   } else {
     //checando se ja existe o email
     const find = await user.findOne({email: email})
+    console.log(name, email)
     const create = (find === null ) ? await user.create({name: name, email: email}) : null
+    console.log(create)
     if(create !== null) {
-      admin.findOneAndUpdate({name: "test"}, { $push :{allUsers: create._id } })
+      const adminPushUser = await admin.findOneAndUpdate({name: "test"}, { $push :{allUsers: create._id } })
+      console.log(adminPushUser)
     }
     const titleToSend = "meu titutlo bonito 2"
     const textToSend = "<p>Show de bola env</p>"
