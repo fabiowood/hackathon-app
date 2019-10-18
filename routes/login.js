@@ -98,3 +98,14 @@ router.get("/login/sendmail", async(req, res) => {
     res.send("sucefull send email")
   }
 })
+
+//CREATE ADM
+
+router.get("/adm-create-get", async(req, res) => {
+  res.render("admin/create-adm.hbs")
+})
+
+router.post("/adm-create", async(req, res) => {
+  admin.create(req.body)
+  res.send("foi")
+})
