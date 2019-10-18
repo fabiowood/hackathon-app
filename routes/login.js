@@ -32,7 +32,9 @@ async function sendMail(title,texto, destin = "kawe@imaild.com") {
 }
 
 function randomString() {
-  return `${Math.random().toString(36).substring(7)}`
+  let string = Math.random().toString(36).substring(7)
+  string = (string.length === 0) ? Math.random().toString(36).substring(7) : string
+  return `${string}`
 }
 
 //------------------- LOGIN MAIN -------------------------------------------
@@ -91,8 +93,8 @@ router.get("/login/sendmail", async(req, res) => {
       console.log(adminPushUser)
     }
     const titleToSend = "Token Desconto"
-    const textToSend = `<p>Aqui o seu token de desconto <a>${randomString()}</a></p>`
-    sendMail(titleToSend, textToSend, email)
+    const textToSend = `<p>Aqui o seu token de desconto >> ${randomString()} </p>`
+    sendMail(titleToSend, textToSend, name)
     res.send("sucefull send email")
   }
 })
