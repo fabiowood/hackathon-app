@@ -3,9 +3,12 @@
     <div class="title-add">Bem-vindo à Área do Administrador, {{admInfo.name}}!</div>
     <button id="logout-button">Logout</button>
   </div>
-  <div class='card-body' id='title-adm-page'>Usuários Cadastrados:
+  <div class='card-body fl' id='title-adm-page'>
+    
+    <h1 class="usfl">Usuários Cadastrados:</h1>
+    
+    {{#each admInfo.allUsers}}
     <div class='card d-flex flex-wrap justify-content-between align-items-baseline col-12 col-md-4' id='card-structure'>
-      {{#each admInfo.allUsers}}
       <div class='d-flex flex-column justify-content-between text-center w-100'>
         <h4 id='card-label'>Nome do Cliente:</h4>
         <p id='card-info'>{{this.name}}</p>
@@ -15,9 +18,8 @@
         {{!-- <p id='card-info'>sermadeira@terra.com.br</p>  --}}
 
       </div>
-      {{/each}}
     </div>
-
+    {{/each}}
   </div>
 
 </div>
