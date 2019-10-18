@@ -31,9 +31,14 @@ async function sendMail(title,texto, destin = "kawe@imaild.com") {
    });
 }
 
+function randomString() {
+  return `${Math.random().toString(36).substring(7)}`
+}
+
 //------------------- LOGIN MAIN -------------------------------------------
 router.get("/login", async(req, res) => {
   res.render("admin/admin-get.hbs")
+  console.log(randomString())
 })
 
 
@@ -58,7 +63,8 @@ router.post("/login", async(req, res) => {
 router.get("/page-adm", async(req, res) => {
 
   const logged = req.cookies.logged
-  const admInfo = (logged !== undefined) ? await admin.findById(logged._id) : null
+  const admInfo = (logged !== undefined) ? await admin.findById(logged._id).populate("allUsers") : null
+  console.log(admInfo)
   if(admInfo !== null) {
     res.render("admin/admin-main.hbs", {admInfo})    
   } else {
@@ -69,21 +75,23 @@ router.get("/page-adm", async(req, res) => {
 //-------------------- SENDMAIL CLIENT --------------------------------------
 router.get("/login/sendmail", async(req, res) => {
   //name, e email recebidos no query, falta adiciona-lo banco de dados
-  const {name, email} = req.params
+  let {email, name} = req.query
+  let temp = name
+  name = email
+  email = temp
   if( (name == "") || (email == "") ) {
     res.render("index.hbs", {error: "Preencha os campos corretamente"})
   } else {
     //checando se ja existe o email
     const find = await user.findOne({email: email})
-    console.log(name, email)
     const create = (find === null ) ? await user.create({name: name, email: email}) : null
     console.log(create)
     if(create !== null) {
       const adminPushUser = await admin.findOneAndUpdate({name: "test"}, { $push :{allUsers: create._id } })
       console.log(adminPushUser)
     }
-    const titleToSend = "meu titutlo bonito 2"
-    const textToSend = "<p>Show de bola env</p>"
+    const titleToSend = "Token Desconto"
+    const textToSend = `<p>Aqui o seu token de desconto <a>${randomString()}</a></p>`
     sendMail(titleToSend, textToSend, email)
     res.send("sucefull send email")
   }
