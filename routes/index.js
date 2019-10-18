@@ -5,14 +5,10 @@ require('dotenv').config()
 
 const express = require('express');
 const router = express.Router();
-const passport = require('passport');
 const bcrypt = require('bcrypt');
 const bcryptSalt = 10;
-const ensureLogin = require('connect-ensure-login');
 const mongoose = require('mongoose');
-// const multer = require("multer");
 const path = require('path');
-const axios = require('axios');
 
 // ########################### Require Models #######################
 

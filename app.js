@@ -10,13 +10,7 @@ const hbs = require('hbs');
 const mongoose = require('mongoose');
 const logger = require('morgan');
 const path = require('path');
-const session = require("express-session");
 const bcrypt = require("bcrypt");
-// const bcryptSalt = 10;
-// const passport = require("passport");
-// const LocalStrategy = require("passport-local").Strategy;
-// const flash = require("connect-flash");
-// const MongoStore = require("connect-mongo")(session);
 
 // Require models
 
@@ -66,65 +60,6 @@ app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
 
 // default value for title local
 app.locals.title = 'Express - Generated with IronGenerator';
-
-// Session & Passport
-
-// app.use(session({
-//   secret: "food-products-project",
-//   // cookie: { maxAge: 6000000 },
-//   resave: true,
-//   saveUninitialized: true,
-// }));
-
-// Serialize & Deserialize
-
-// passport.serializeUser((user, cb) => {
-//   cb(null, user._id);
-// });
-
-// passport.deserializeUser((id, cb) => {
-//   User.findById(id, (err, user) => {
-//     if (err) {
-//       return cb(err);
-//     }
-//     cb(null, user);
-//   });
-// });
-
-// passport.use(new LocalStrategy({
-//   passReqToCallback: true
-// }, (req, username, password, next) => {
-//   User.findOne({
-//     username
-//   }, (err, user) => {
-//     if (err) {
-//       return next(err);
-//     }
-//     if (!user) {
-//       return next(null, false, {
-//         message: "Usuário incorreto"
-//       });
-//     }
-//     if (!bcrypt.compareSync(password, user.password)) {
-//       return next(null, false, {
-//         message: "Senha incorreta"
-//       });
-//     }
-
-//     return next(null, user);
-//   });
-// }));
-
-// // Session
-
-// app.use(passport.initialize());
-// app.use(passport.session());
-
-// // Flash
-
-// app.use(flash());
-
-// Routes
 
 const index = require('./routes/index');
 const route_admin = require("./routes/login.js")
