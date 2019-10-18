@@ -93,7 +93,7 @@ router.get("/login/sendmail", async(req, res) => {
       console.log(adminPushUser)
     }
     const titleToSend = "Token Desconto"
-    const textToSend = `<p>Aqui o seu token de desconto >> ${randomString()} </p>`
+    const textToSend =  `<p>Venha para o nosso site e ganhe seu desconto no seu prato preferido<a href="https://easyfreeze.herokuapp.com/?token=${randomString()} + '"> click em mim :) </a></p>`
     sendMail(titleToSend, textToSend, name)
     res.send("sucefull send email")
   }
