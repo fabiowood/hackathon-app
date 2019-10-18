@@ -22,4 +22,41 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  //maps google
+  // function makerMapGoogle(map, latParam = 41.3977381, lngParam = 2.190471916, titleParam = "i'm here too") {
+  //   const myMarker = new google.maps.Marker({
+  //   position: {
+  //     lat: 41.3977381,
+  //     lng: 2.190471916
+  //   },
+  //     map: map,
+  //     title: "i'm here too"
+  //   });
+  // }
+
+  function startMap() {
+    const ironhackBCN = {
+      lat: -23.5618714,
+      lng: -46.6600499};
+    const map = new google.maps.Map(
+      document.getElementById('map'),
+      {
+        zoom: 18,
+        center: ironhackBCN
+      }
+    );
+
+    const myMarker = new google.maps.Marker({
+      position: {
+        lat: -23.5618714,
+        lng: -46.6600499
+      },
+        map: map,
+        title: "i'm here too"
+      });
+
+  }
+  
+  startMap();
+
 }, false);
