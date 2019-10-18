@@ -50,20 +50,20 @@ function ensureAuthenticated(req, res, next) {
 
 // ########################### Admin Login #######################
 
-router.get('/login', (req, res, next) => {
-  res.render('login');
-});
+// router.get('/login', (req, res, next) => {
+//   res.render('login');
+// });
 
-router.post('/login', (req, res, next) => {
-  res.render('admin-page');
-});
+// router.post('/login', (req, res, next) => {
+//   res.render('admin-page');
+// });
 
-// ########################### Admin Logout #######################
+// // ########################### Admin Logout #######################
 
-router.get('/logout', (req, res) => {
-  req.logout();
-  res.redirect('/login');
-});
+// router.get('/logout', (req, res) => {
+//   req.logout();
+//   res.redirect('/login');
+// });
 
 // ########################### Admin Page #######################
 
