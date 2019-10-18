@@ -6,7 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault()
       const inputName = document.getElementsByClassName("input-name")[0].value
       const inputEmail = document.getElementsByClassName("input-email")[0].value
-      axios.get(`/login/sendmail?name=${inputName}&email=${inputEmail}`).then((s) => console.log(s))
+      console.log(inputName, inputEmail)
+      axios.get(`/login/sendmail?email=${inputEmail}&name=${inputName}`).then((s) => console.log(s))
     }
   }
 
