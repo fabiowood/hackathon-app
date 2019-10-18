@@ -36,27 +36,53 @@ document.addEventListener('DOMContentLoaded', () => {
   // }
 
   function startMap() {
-    const ironhackBCN = {
-      lat: -23.5618714,
-      lng: -46.6600499};
+    const resturants = {
+      lat: -23.6052026,
+      lng: -46.6720421};
     const map = new google.maps.Map(
       document.getElementById('map'),
       {
-        zoom: 18,
-        center: ironhackBCN
+        zoom: 16,
+        center: resturants
       }
     );
 
-    const myMarker = new google.maps.Marker({
+    const myMarkerOne = new google.maps.Marker({
       position: {
-        lat: -23.5618714,
-        lng: -46.6600499
+        lat: -23.6052026,
+        lng: -46.6720421
       },
         map: map,
         title: "i'm here too"
       });
 
-  }
+    const myMarker = new google.maps.Marker({
+      position: {
+        lat: -23.604044,
+        lng: -46.6720245
+      },
+        map: map,
+        title: "i'm here too"
+      });
+
+    const myMarkerTwo = new google.maps.Marker({
+      position: {
+        lat: -23.6040578,
+        lng: -46.6720245
+      },
+        map: map,
+        title: "i'm here too"
+      });
+
+      const myMarkerThree = new google.maps.Marker({
+        position: {
+          lat: -23.6007768,
+          lng: -46.6707231
+        },
+          map: map,
+          title: "i'm here too"
+        });
+      }
   
   startMap();
 
