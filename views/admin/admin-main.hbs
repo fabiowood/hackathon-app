@@ -1,8 +1,23 @@
-<main>
-  <h1>id: {{admInfo._id}}</h1>
-  <h1>Name: {{admInfo.name}}</h1>
-  <h1>login: {{admInfo.login}}</h1>
-  <h1>password: {{admInfo.password}}</h1>
+<div class='container' id='card-body'>
+  <div class="card-body d-flex justify-content-between align-items-baseline" id='welcome-admin-page'>
+    <div class="title-add">Bem-vindo à Área do Administrador, {{admInfo.name}}!</div>
+    <button id="logout-button">Logout</button>
+  </div>
+  <div class='card-body' id='title-adm-page'>Usuários Cadastrados:
+    <div class='card d-flex flex-wrap justify-content-between align-items-baseline col-12 col-md-4' id='card-structure'>
+      {{#each admInfo.allUsers}}
+      <div class='d-flex flex-column justify-content-between text-center w-100'>
+        <h4 id='card-label'>Nome do Cliente:</h4>
+        <p id='card-info'>{{this.name}}</p>
+        {{!-- <p id='card-info'>Sergio Madeira</p> --}}
+        <h4 id='card-label'>E-Mail de Contato:</h4>
+        <p id='card-info'>{{this.email}}</p>
+        {{!-- <p id='card-info'>sermadeira@terra.com.br</p>  --}}
 
-  <button id = "logout-button">logout</button>
-</main>
+      </div>
+      {{/each}}
+    </div>
+
+  </div>
+
+</div>

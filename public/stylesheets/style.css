@@ -141,4 +141,120 @@ body {
   font-size: 3.6rem;
   line-height: 47px; }
 
+/* ################### LOGIN PAGE ################### */
+#form {
+  margin: 50px auto;
+  width: 450px; }
+
+#form label {
+  color: #666;
+  display: inline-block;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  width: 100%; }
+
+#form input {
+  box-sizing: border-box;
+  font-size: 1.3rem;
+  outline: 0;
+  padding: 10px;
+  width: 100%;
+  margin-bottom: 20px;
+  border-radius: 14.6584px; }
+
+#form button {
+  box-sizing: border-box;
+  font-size: 1.5rem;
+  font-weight: 700;
+  outline: 0;
+  padding: 5px;
+  width: 35%;
+  margin-top: -25px;
+  border-radius: 14.6584px; }
+
+.error-message {
+  background: #F02B63;
+  box-sizing: border-box;
+  color: #fff;
+  margin: 20px auto;
+  padding: 20px;
+  width: 100%; }
+
+#title-signup {
+  text-align: center;
+  font-size: 2.5em;
+  font-weight: 700;
+  color: white;
+  background: #282836;
+  margin: 100px 100px 50px 50px;
+  padding: 10px;
+  border-radius: 55px;
+  border: none;
+  width: 90%; }
+
+/* ################### ADMIN PAGE ################### */
+#welcome-admin-page {
+  background: #282836;
+  border-radius: 20px;
+  padding: 20px; }
+
+.title-add {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 700;
+  width: 60%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px; }
+
+#title-adm-page {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #0c2f3b;
+  border: none;
+  background-color: none;
+  margin-top: 20px; }
+
+#logout-button {
+  box-sizing: border-box;
+  font-size: 1.5rem;
+  font-weight: 700;
+  outline: 0;
+  padding: 10px 7px;
+  margin-right: 50px;
+  width: 10%;
+  background: #b87676;
+  color: white;
+  border: none;
+  border-radius: 5px; }
+
+#card-structure {
+  box-sizing: border-box;
+  margin-top: 50px;
+  background: #5A56F5;
+  border-radius: 20px;
+  padding: 5px 5px; }
+
+#card-label {
+  color: white;
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 10px;
+  margin-top: 10px; }
+
+#card-info {
+  color: #b7dee0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 10px;
+  margin-top: 10px; }
+
+#card-body {
+  margin-top: 100px; }
+
 /*# sourceMappingURL=style.css.map */
